@@ -9,6 +9,9 @@ class Settings(BaseSettings):
     anthropic_model: str = "claude-sonnet-4-20250514"
     openai_api_key: str = ""
     openai_model: str = "gpt-4o"
+    auth_username: str = "admin"
+    auth_password: str = "changeme"
+    session_secret: str = "change-this-secret-key"
 
     model_config = {"env_file": ".env", "extra": "ignore"}
 

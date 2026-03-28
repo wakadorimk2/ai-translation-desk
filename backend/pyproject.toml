@@ -16,6 +16,7 @@ dependencies = [
     "chromadb",
     "sentence-transformers",
     "anthropic",
+    "itsdangerous",
 ]
 
 [project.optional-dependencies]
