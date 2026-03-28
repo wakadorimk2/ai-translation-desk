@@ -1,4 +1,4 @@
-.PHONY: dev dev-backend dev-frontend setup db-migrate db-seed
+.PHONY: dev dev-backend dev-frontend setup db-migrate db-seed docker-build docker-run
 
 dev:
 	@echo "Starting backend and frontend..."
@@ -19,3 +19,9 @@ db-migrate:
 
 db-seed:
 	cd backend && python3 -m app.seed
+
+docker-build:
+	docker build -t ai-translation-desk .
+
+docker-run:
+	docker run --rm -p 8000:8000 --env-file .env -v $(CURDIR)/backend/data:/app/backend/data ai-translation-desk

@@ -1,0 +1,9 @@
+.git
+node_modules
+__pycache__
+*.pyc
+*.egg-info
+backend/data/
+frontend/dist/
+frontend/node_modules/
+.env
